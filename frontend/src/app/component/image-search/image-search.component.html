@@ -1,0 +1,15 @@
+<form>
+    <div>
+        <input type="text" (keyup)="onSerClick($event)" placeholder="Search" class="inbox">
+    </div>
+    <br>
+    <div>
+        <img [src]="img?.urls" [alt]="img?.altText" *ngFor="let img of paginatedData" />
+    </div>
+    <br>
+    <div class="pagination">
+       <a href="#" (click)="onPreClick($event)">&laquo; </a>
+       <a href="#" *ngFor="let item of items" (click)="getItemsAsPerPageNumber($event,item)"> {{item}} </a>
+       <a href="#" (click)="onNextClick($event)"> &raquo; </a>
+    </div>
+</form> 
